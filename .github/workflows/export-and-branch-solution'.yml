@@ -25,9 +25,9 @@ on:
        default: solutions/
 env:
 #edit your values here
-  ENVIRONMENT_URL: 'https://org781fbb61.crm.dynamics.com'
-  CLIENT_ID: 'd32e7a39-7ac4-4102-82da-bc35917f9329'
-  TENANT_ID: 'c371506d-36a1-4f76-a98d-fed14d2f88d5'
+  BUILD_BUILD_ENVIRONMENT_URL: 'https://org781fbb61.crm.dynamics.com'
+  BUILD_CLIENT_ID: 'd32e7a39-7ac4-4102-82da-bc35917f9329'
+  BUILD_TENANT_ID: 'c371506d-36a1-4f76-a98d-fed14d2f88d5'
 permissions:
   contents: write
 jobs:
@@ -45,19 +45,19 @@ jobs:
     - name: who-am-i action
       uses: microsoft/powerplatform-actions/who-am-i@v0
       with:
-        environment-url: ${{env.ENVIRONMENT_URL}}
-        app-id: ${{env.CLIENT_ID}}
+        environment-url: ${{env.BUILD_ENVIRONMENT_URL}}
+        app-id: ${{env.BUILD_CLIENT_ID}}
         client-secret: ${{ secrets.PowerPlatformSPN }}
-        tenant-id: ${{env.TENANT_ID}}
+        tenant-id: ${{env. BUILD_TENANT_ID}}
 
 
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@v0
       with:
-        environment-url: ${{env.ENVIRONMENT_URL}}
-        app-id: ${{env.CLIENT_ID}}
+        environment-url: ${{env.BUILD_ENVIRONMENT_URL}}
+        app-id: ${{env.BUILD_CLIENT_ID}}
         client-secret: ${{ secrets.PowerPlatformSPN }}
-        tenant-id: ${{env.TENANT_ID}}
+        tenant-id: ${{env. BUILD_TENANT_ID}}
         solution-name: ${{ github.event.inputs.solution_name }}
         solution-output-file: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
 
