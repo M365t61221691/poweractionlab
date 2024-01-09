@@ -16,7 +16,11 @@ jobs:
       #Update your values here
       BUILD_ENVIRONMENT_URL: <BUILD_ENVIRONMENT>
       PRODUCTION_ENVIRONMENT_URL: <PROD_ENVIRONMENT>
-      CLIENT_ID: <APP_ID>
-      TENANT_ID: <TENANT_ID>      
+      BUILD_CLIENT_ID: <APP_ID>
+      BUILD_TENANT_ID: <TENANT_ID>
+      PRODUCTION_ CLIENT_ID: <APP_ID>
+      PRODUCTION_TENANT_ID: <TENANT_ID>
+     
     secrets:
-      envSecret: ${{ secrets.PowerPlatformSPN }}
+      BUILD_envSecret: ${{ secrets.PowerPlatformSPN }}
+      PRODUCTION__envSecret: ${{ secrets.PowerPlatformSPN }}
