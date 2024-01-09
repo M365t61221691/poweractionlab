@@ -36,17 +36,28 @@ on:
         description: 'Production environment url.'
         type: string
         required: true
-      CLIENT_ID: 
-        description: 'The client id'
+      BUILD_CLIENT_ID: 
+        description: 'The BUILD_client id'
         type: string
         required: true
-      TENANT_ID: 
-        description: 'The tenant id'
+      BUILD_TENANT_ID: 
+        description: 'The BUILD_tenant id'
+        type: string
+        required: true
+      PRODUCTION_CLIENT_ID: 
+        description: 'The PRODUCTION_client id'
+        type: string
+        required: true
+      PRODUCTION_TENANT_ID: 
+        description: 'The PRODUCTION_tenant id'
         type: string
         required: true
     secrets:
-      envSecret:
-        description: 'The secret value for authentication using SPN'
+      BUILD_envSecret:
+        description: 'The build_secret value for authentication using SPN'
+        required: true
+      PRODUCTION_envSecret:
+        description: 'The production_secret value for authentication using SPN'
         required: true
 
 jobs:
@@ -72,9 +83,9 @@ jobs:
       uses: microsoft/powerplatform-actions/import-solution@v0
       with:
         environment-url: ${{inputs.BUILD_ENVIRONMENT_URL}}
-        app-id: ${{inputs.CLIENT_ID}}
-        client-secret: ${{ secrets.envSecret }}
-        tenant-id: ${{inputs.TENANT_ID}}
+        app-id: ${{inputs.BUILD_CLIENT_ID}}
+        client-secret: ${{ secrets.BUILD_envSecret }}
+        tenant-id: ${{inputs.BUILD_TENANT_ID}}
         solution-file: ${{ inputs.solution_outbound_folder}}/${{ inputs.solution_name }}.zip
         force-overwrite: true
         publish-changes: true
@@ -83,9 +94,9 @@ jobs:
       uses: microsoft/powerplatform-actions/export-solution@v0
       with:
         environment-url: ${{inputs.BUILD_ENVIRONMENT_URL}}
-        app-id: ${{inputs.CLIENT_ID}}
-        client-secret: ${{ secrets.envSecret }} 
-        tenant-id: ${{inputs.TENANT_ID}}
+        app-id: ${{inputs.BUILD_CLIENT_ID}}
+        client-secret: ${{ secrets.BUILD_envSecret }} 
+        tenant-id: ${{inputs.BUILD_TENANT_ID}}
         solution-name: ${{ inputs.solution_name }}
         managed: true
         solution-output-file: ${{ inputs.solution_shipping_folder}}/${{ inputs.solution_name }}_managed.zip
@@ -116,9 +127,9 @@ jobs:
       uses: microsoft/powerplatform-actions/import-solution@v0
       with:
         environment-url: ${{inputs.PRODUCTION_ENVIRONMENT_URL}}
-        app-id: ${{inputs.CLIENT_ID}}
-        client-secret: ${{ secrets.envSecret }}
-        tenant-id: ${{inputs.TENANT_ID}}
+        app-id: ${{inputs.PRODUCTION_CLIENT_ID}}
+        client-secret: ${{ secrets.PRODUCTION_envSecret }}
+        tenant-id: ${{inputs.PRODUCTION_TENANT_ID}}
         solution-file: ${{ inputs.solution_release_folder}}/${{ inputs.solution_name }}_managed.zip
         force-overwrite: true
         publish-changes: true
