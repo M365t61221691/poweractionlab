@@ -28,7 +28,4 @@
   <IsCustomizable>1</IsCustomizable>
   <BackgroundImageUri>/CanvasApps/new_ddf_17772_BackgroundImageUri</BackgroundImageUri>
   <DocumentUri>/CanvasApps/new_ddf_17772_DocumentUri.msapp</DocumentUri>
-  <AdditionalUris>
-    <AdditionalUri>/CanvasApps/new_ddf_17772_AdditionalUris0_identity.json</AdditionalUri>
-  </AdditionalUris>
 </CanvasApp>
