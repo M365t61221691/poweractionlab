@@ -79,7 +79,19 @@
         </Address>
       </Addresses>
     </Publisher>
-    <RootComponents />
-    <MissingDependencies />
+    <RootComponents>
+      <RootComponent type="80" schemaName="msdyn_AssetCheckout" behavior="0" />
+      <RootComponent type="80" schemaName="sample_Fundraiser" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="80" schemaName="msdyn_AssetCheckout" displayName="Asset Checkout" solution="AssetCheckout (0.0.0.1)" />
+        <Dependent type="80" schemaName="msdyn_AssetCheckout" displayName="Asset Checkout" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="80" schemaName="sample_Fundraiser" displayName="Fundraiser" solution="msdyn_SampleApp (1.0.0.4)" />
+        <Dependent type="80" schemaName="sample_Fundraiser" displayName="Fundraiser" />
+      </MissingDependency>
+    </MissingDependencies>
   </SolutionManifest>
 </ImportExportXml>
