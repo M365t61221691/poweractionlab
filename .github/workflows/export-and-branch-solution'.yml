@@ -52,7 +52,7 @@ jobs:
 
 
     - name: export-solution action
-      uses: microsoft/powerplatform-actions/export-solution@v1
+      uses: microsoft/powerplatform-actions/export-solution@v0
       with:
         environment-url: ${{env.BUILD_ENVIRONMENT_URL}}
         app-id: ${{env.BUILD_CLIENT_ID}}
