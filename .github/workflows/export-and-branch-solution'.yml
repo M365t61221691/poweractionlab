@@ -40,9 +40,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        lfs: true
-  
-            
+        lfs: true   
     - name: who-am-i action
       uses: microsoft/powerplatform-actions/who-am-i@v0
       with:
@@ -50,8 +48,6 @@ jobs:
         app-id: ${{env.BUILD_CLIENT_ID}}
         client-secret: ${{ secrets.PowerPlatformSPN }}
         tenant-id: ${{env. BUILD_TENANT_ID}}
-
-
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@v0
       with:
@@ -80,7 +76,4 @@ jobs:
         
     - name: Install Power Platform Tools
       uses: microsoft/powerplatform-actions/actions-install@v1
-
-    - name: powerplatform-actions
-      uses: microsoft/powerplatform-actions@v1.2.0
             
