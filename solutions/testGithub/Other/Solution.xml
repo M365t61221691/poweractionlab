@@ -80,10 +80,51 @@
       </Addresses>
     </Publisher>
     <RootComponents>
+      <RootComponent type="300" schemaName="new_newcanvasp_26962" behavior="0" />
       <RootComponent type="80" schemaName="msdyn_AssetCheckout" behavior="0" />
       <RootComponent type="80" schemaName="sample_Fundraiser" behavior="0" />
     </RootComponents>
     <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="sample_donation" displayName="Donation" solution="msdyn_SampleApp (1.0.0.4)" />
+        <Dependent type="80" schemaName="sample_Fundraiser" displayName="Fundraiser" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="sample_fundraiser" displayName="Fundraiser" solution="msdyn_SampleApp (1.0.0.4)" />
+        <Dependent type="80" schemaName="sample_Fundraiser" displayName="Fundraiser" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="sample_product" displayName="Product" solution="AssetCheckout (0.0.0.1)" />
+        <Dependent type="80" schemaName="msdyn_AssetCheckout" displayName="Asset Checkout" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="sample_reservation" displayName="Reservation" solution="AssetCheckout (0.0.0.1)" />
+        <Dependent type="80" schemaName="msdyn_AssetCheckout" displayName="Asset Checkout" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="sample_review" displayName="Review" solution="AssetCheckout (0.0.0.1)" />
+        <Dependent type="80" schemaName="msdyn_AssetCheckout" displayName="Asset Checkout" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Fundraiser Donations" solution="msdyn_SampleApp (1.0.0.4)" id="{260a7ce0-3591-e811-a963-000d3a33eeed}" />
+        <Dependent type="80" schemaName="sample_Fundraiser" displayName="Fundraiser" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="sample_AssetCheckoutApp" displayName="sample_AssetCheckoutApp" solution="AssetCheckout (0.0.0.1)" />
+        <Dependent type="80" schemaName="msdyn_AssetCheckout" displayName="Asset Checkout" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="sample_FundraiserApp" displayName="sample_FundraiserApp" solution="msdyn_SampleApp (1.0.0.4)" />
+        <Dependent type="80" schemaName="sample_Fundraiser" displayName="Fundraiser" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="62" schemaName="msdyn_AssetCheckout" solution="AssetCheckout (0.0.0.1)" />
+        <Dependent type="80" schemaName="msdyn_AssetCheckout" displayName="Asset Checkout" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="62" schemaName="sample_Fundraiser" solution="msdyn_SampleApp (1.0.0.4)" />
+        <Dependent type="80" schemaName="sample_Fundraiser" displayName="Fundraiser" />
+      </MissingDependency>
       <MissingDependency>
         <Required type="80" schemaName="msdyn_AssetCheckout" displayName="Asset Checkout" solution="AssetCheckout (0.0.0.1)" />
         <Dependent type="80" schemaName="msdyn_AssetCheckout" displayName="Asset Checkout" />
