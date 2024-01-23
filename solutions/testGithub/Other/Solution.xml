@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.23112.230" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.23121.196" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>testGithub</UniqueName>
     <LocalizedNames>
       <LocalizedName description="testGithub" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
-    <Version>1.0.0.1</Version>
+    <Version>1.0.0.2</Version>
     <Managed>0</Managed>
     <Publisher>
       <UniqueName>DefaultPublisherorg781fbb61</UniqueName>
@@ -80,6 +80,7 @@
       </Addresses>
     </Publisher>
     <RootComponents>
+      <RootComponent type="29" id="{b5b1d05d-edb9-ee11-a569-00224805c586}" behavior="0" />
       <RootComponent type="300" schemaName="new_newcanvasp_26962" behavior="0" />
       <RootComponent type="80" schemaName="msdyn_AssetCheckout" behavior="0" />
       <RootComponent type="80" schemaName="sample_Fundraiser" behavior="0" />
