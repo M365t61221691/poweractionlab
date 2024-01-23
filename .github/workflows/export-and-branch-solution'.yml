@@ -11,7 +11,7 @@ on:
         required: true
         default: testGithub
       SharePoint_Data:
-         description: 'name of the solution to worked on from Power Platform'
+         description: 'Replace SiteName with new site'
          required: false
          default: https://org781fbb61.sharepoint.com/SiteName
        #Do Not change these values
