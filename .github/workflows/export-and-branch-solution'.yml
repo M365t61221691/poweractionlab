@@ -10,6 +10,10 @@ on:
         description: 'name of the solution to worked on from Power Platform'
         required: true
         default: testGithub
+      SharePoint_Data:
+         description: 'name of the solution to worked on from Power Platform'
+         required: false
+         default: tobeschanged 
        #Do Not change these values
       solution_exported_folder:
         description: 'folder name for staging the exported solution *do not change*'
